@@ -1,0 +1,65 @@
+.jumbotron{
+	background-image: url("../images/fire.gif");
+	background-size: 100%;
+    background-repeat: no-repeat;
+
+
+}
+
+#title{
+	font-family: 'Cinzel', serif;
+	font-size: 500%;
+}
+
+
+.answer, .question, .timer{
+	border: 1px solid transparent;
+	display: none;
+}
+
+h1, h3 {
+   color: red;  /* Fallback: assume this color ON TOP of image */
+   background: url("../images/fire3.gif");
+   background-position: 50% 90%;
+/*   	background-size: 100%;
+    background-repeat: no-repeat;*/
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Cinzel', serif;
+
+}
+
+h2{ color: yellow;
+	font-family: 'Cinzel', serif;
+	text-shadow: 2px 1px black;
+
+
+}
+
+.start {
+	background-image: url("../images/fire3.gif");
+	background-size: 110%;
+	font-family: 'Cinzel', serif;
+
+}
+
+.sound {
+	background-image: url("../images/fire3.gif");
+	background-size: 60%;
+	font-family: 'Cinzel', serif;
+	position: relative;
+	float: right;
+
+}
+
+body{
+	background-image: url("../images/hell.jpg");
+	background-size: 74%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: black;
+}
+
+
+html, body:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur7.cur), progress !important;} 
+h3, button:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), progress !important;} 
