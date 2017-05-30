@@ -40,29 +40,34 @@ function timer(){	time=30;
    	$(".timer").html(time);
    	intervalId = setInterval(decrement, 1000);
     decrement();
-   };
-
+   }200
 function image(){
 	if (currentQuestion == 1){
-		$(".imageHolder").html('<img src="assets/images/hades.gif".width(5) />');
+		$(".imageHolder").html('<img id="hades" src="assets/images/hades.gif" />');
+		$('#hades').width(200);
 	}
 	else if (currentQuestion == 2){
-		$(".imageHolder").html('<img src="assets/images/satan.gif" />');
+		$(".imageHolder").html('<img id="satan" src="assets/images/satan.gif" />');
+		$('#satan').width(200);
 	}
 	else if (currentQuestion == 3){
-		$(".imageHolder").html('<img src="assets/images/dante.gif" />');
+		$(".imageHolder").html('<img id="dante" src="assets/images/dante.gif" />');
+		$('#dante').width(200);
 	}
 	else if (currentQuestion == 4){
-		$(".imageHolder").html('<img src="assets/images/puppy.gif" />');
+		$(".imageHolder").html('<img id="puppy" src="assets/images/puppy.gif" />');
+		$('#puppy').width(200);
 	}
 	else if (currentQuestion == 5){
-		$(".imageHolder").html('<img src="assets/images/layers.gif" />');
+		$(".imageHolder").html('<img id="layers" src="assets/images/layers.gif" />');
+		$('#layers').width(200);
 	}
 
 	};
 
 function imageWrong(){
-	$(".imageHolder").html('<img src="assets/images/what.gif" />');
+	$(".imageHolder").html('<img id="what" src="assets/images/what.gif" />');
+	$('#what').width(200);
 }
 
 function next(){
@@ -165,12 +170,16 @@ function gameOver(){
 	$('.start').show();
 	$('.answer').hide();
 	if (correctAnswer == 5){
-		$(".imageHolder").html('<img src="assets/images/rocker.gif" />');
+		$(".imageHolder").html('<img id="rocker" src="assets/images/rocker.gif" />');
+		$('#rocker').width(200);
 		$(".question").append("<br> ROCK ON!");
 	}
-	else if (correctAnswer <= 1)
-		$(".imageHolder").html('<img src="assets/images/dunno.gif" />');
-	else $(".imageHolder").html('<img src="assets/images/robot.gif" />');
+	else if (correctAnswer <= 1){
+		$(".imageHolder").html('<img id="dunno" src="assets/images/dunno.gif" />');
+		$('#dunno').width(200)}
+
+	else $(".imageHolder").html('<img id="robot" src="assets/images/robot.gif" />');
+		$('#robot').width(200);
 }
 
 var q1 = {
