@@ -1,12 +1,12 @@
 $(document).ready(function(){
-
+//lets the player see what they are selecting
 	$(".answer").on("mouseover", function () {
     	$(this).css("background-color","darkred");
 });
    $(".answer").on("mouseout", function () {
     	$(this).css("background-color","transparent");
 });
-
+//plays and stops music
 var music = new Audio('assets/devilgeorgia.mp3')
 music.play();
 
@@ -17,14 +17,14 @@ $('.sound').click(function() {
       music.play();
   }
 });
-
+//sets variables
 var time = 30;
 var currentTime = 0;
 var click = 0;
 var correctAnswer = 0;
 var intervalId = "";
 var currentQuestion = 0;
- 
+ //count down for timer
  function decrement() {
       time--;
       $(".timer").html(time);
@@ -35,12 +35,13 @@ var currentQuestion = 0;
    	$('.false').hide();
    	setTimeout(function(){ next(); }, 3000);
   }};
-
+//timer itself
 function timer(){	time=30;
    	$(".timer").html(time);
    	intervalId = setInterval(decrement, 1000);
     decrement();
    }200
+ //display image based on question
 function image(){
 	if (currentQuestion == 1){
 		$(".imageHolder").html('<img id="hades" src="assets/images/hades.gif" />');
@@ -64,12 +65,12 @@ function image(){
 	}
 
 	};
-
+//if wrong answer display image
 function imageWrong(){
 	$(".imageHolder").html('<img id="what" src="assets/images/what.gif" />');
 	$('#what').width(200);
 }
-
+//move to next question and reset timer
 function next(){
 	$(".answer").removeClass('true');
 	$(".answer").addClass("false");
@@ -163,7 +164,7 @@ function question5(){
    	$(".ans3").addClass("true");
    	$(".ans4 h3:first-child").html(q5.options [2]);
 }
-
+//end of game, display score and show dynamic image based on score
 function gameOver(){
 	$(".timer").html("Again?");
 	$(".question").html("You got " + correctAnswer + " out of 5 questions right");
@@ -181,7 +182,7 @@ function gameOver(){
 	else $(".imageHolder").html('<img id="robot" src="assets/images/robot.gif" />');
 		$('#robot').width(200);
 }
-
+//questions...
 var q1 = {
 	question: "What is the name of the Greek God of the underworld?",
 	options: ["Pluto", "Lucifer", "Azrael"],
@@ -211,7 +212,7 @@ var q5 = {
 	options: ["666", "13", "7"],
 	answer: "9",
 }
-
+//the start button that lets the player choose to begin
    $(".start").on("click", function start() {
    	$(".imageHolder").html("");
    	$('.start').hide();
@@ -219,6 +220,7 @@ var q5 = {
    	next();
 
 });
+//checks player click for right or wrong
     $(".answer").on("click", function() {
 
     if ( $(this).hasClass( "false" ) && click == 0){
@@ -241,6 +243,59 @@ var q5 = {
    	setTimeout(function(){ $(".title").html("Trivia From Hell!"); $(".imageHolder").html(""); next(); }, 4000);
    }
 });
+
+//this is me playing with a better version for purposes of scaling
+// var qq = {
+// 		q1 : { 
+// 			ques: "this is a question 1",
+// 			op: ["option1" , "option2" , "option3", "option4"],
+// 			ans: "option4"
+// 			},
+// 		q2 : { 
+// 			ques: "this is a question 2",
+// 			op: ["option1" , "option2" , "option3", "option4"],
+// 			ans: "option2"
+// 			},
+// }
+// var playerAnswer = "";
+// console.log(qq.q1);
+// console.log(qq.q2.ques);
+// console.log(qq.q2.ans)
+
+// $(".tester1").on("click", function(){
+// 	playerAnswer=("option1");
+// 	console.log(playerAnswer);
+// 	if (playerAnswer == qq.q1.ans){
+// 		alert("well done!")
+// 	}
+// 	else alert("BOO!")
+// });
+// $(".tester2").on("click", function(){
+// 	playerAnswer=("option2");
+// 	console.log(playerAnswer);
+// 	if (playerAnswer == qq.q1.ans){
+// 		alert("well done!")
+// 	}
+// 	else alert("BOO!")
+// });
+
+// $(".tester3").on("click", function(){
+// 	playerAnswer=("option3");
+// 	console.log(playerAnswer);
+// 	if (playerAnswer == qq.q1.ans){
+// 		alert("well done!")
+// 	}
+// 	else alert("BOO!")
+// });
+
+// $(".tester4").on("click", function(){
+// 	playerAnswer=("option4");
+// 	console.log(playerAnswer);
+// 	if (playerAnswer == qq.q1.ans){
+// 		alert("well done!")
+// 	}
+// 	else alert("BOO!")
+// });
 
 
 

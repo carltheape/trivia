@@ -26,8 +26,8 @@ h1, h3 {
    font-family: 'Cinzel', serif;
 
 }
-
-@media screen and (max-width: 990px) {
+/*for a scaling issue & playing on phones
+*/@media screen and (max-width: 990px) {
     #title {
         font-size: 300%;
     }
@@ -72,6 +72,6 @@ body{
 	max-height: 10px;
 }
 
-
-html, body:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur7.cur), progress !important;} 
+/*silly cursors
+*/html, body:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur7.cur), progress !important;} 
 h3, button:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), progress !important;} 
